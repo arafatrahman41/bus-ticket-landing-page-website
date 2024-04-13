@@ -16,47 +16,88 @@
 <body>
     <!-- header section start -->
     <header>
-        <div>
+        <!-- navbar start -->
+        <div class="container px-8 lg:px-24 mx-auto pt-12 font-raleway">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                      <li><a>Item 1</a></li>
-                      <li>
-                        <a>Parent</a>
-                        <ul class="p-2">
-                          <li><a>Submenu 1</a></li>
-                          <li><a>Submenu 2</a></li>
-                        </ul>
-                      </li>
-                      <li><a>Item 3</a></li>
-                    </ul>
-                  </div>
-                  <a class="btn btn-ghost text-xl">daisyUI</a>
+                    <a class="text-xl md:text-2xl lg:text-4xl md:font-semibold lg:font-bold">TicketEase</a>
                 </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
-                      <details>
-                        <summary>Parent</summary>
-                        <ul class="p-2">
-                          <li><a>Submenu 1</a></li>
-                          <li><a>Submenu 2</a></li>
-                        </ul>
-                      </details>
-                    </li>
-                    <li><a>Item 3</a></li>
-                  </ul>
+                <div class="navbar-center hidden lg:flex font-medium">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
                 </div>
                 <div class="navbar-end">
-                  <a class="btn">Button</a>
+                    <a class="btn btn-style text-[#1DD100] lg:px-8">
+                        Bus
+                        <img src="./images/bus-icon.png" alt="">
+                    </a>
                 </div>
-              </div>
+            </div>
         </div>
+        <!-- navbar end -->
+        <!-- banner section start -->
+        <div class="container mx-auto px-8 lg:px-24 mt-6">
+            <div class="bg-[url('./images/banner.png')] bg-no-repeat h-[85vh] bg-cover rounded-[2.5rem] flex justify-center pt-20 xl:pt-32">
+                <div class="text-white text-center">
+                    <h1 class="text-xl md:text-3xl lg:text-6xl font-bold w-2/3 mx-auto mb-4">End-to-End Travel with <span class="text-[#1DD100]">London Express</span></h1>
+                    <p class="w-2/3 mx-auto mb-8 text-sm md:text-base">Welcome to TicketEase – your hassle-free solution for bus ticket bookings. Enjoy seamless travel planning and secure your seats in just a few clicks. Start your journey with ease today!</p>
+                    <button class="btn border-none text-base md:text-xl bg-[#1DD100] md:px-7">Buy Tickets</button>
+                </div>
+            </div>
+            <div class="font-inter space-x-2 xl:space-x-6 space-y-6 flex flex-col lg:flex-row justify-center items-center -translate-y-16">
+                <!-- first stat card -->
+                <div class="stats shadow mt-5 w-72 md:w-96 lg:w-60 xl:w-[19.2rem]">
+                    <div class="stat flex items-center justify-center">
+                        <img src="./images/people.png" alt="">
+                        <div>
+                            <div class="stat-value">500K+</div>
+                            <div class="stat-desc text-lg ">Registered users</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- second stat card -->
+                <div class="stats shadow w-72 md:w-96 lg:w-60 xl:w-[19.2rem]">
+                    <div class="stat flex items-center justify-center">
+                        <img src="./images/ticket-cupon.png" alt="">
+                        <div>
+                            <div class="stat-value">1.7 lacks</div>
+                            <div class="stat-desc text-lg ">Tickets sold</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- third stat card -->
+                <div class="stats shadow w-72 md:w-96 lg:w-60 xl:w-[19.2rem]">
+                    <div class="stat flex items-center justify-center">
+                        <img src="./images/stoppage.png" alt="">
+                        <div>
+                            <div class="stat-value">80K+</div>
+                            <div class="stat-desc text-lg ">Rental partners</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- banner section end -->
     </header>
     <!-- header section end -->
     <!-- main section start -->
@@ -69,7 +110,7 @@
 
     </footer>
     <!-- footer section end -->
-<script src="scripts/index.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
