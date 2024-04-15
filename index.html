@@ -222,7 +222,7 @@
             </div>
             <!-- select your seat section start -->
             <div class="container mx-auto px-8 lg:px-24 font-raleway">
-                <div class="bg-white  rounded-3xl">
+                <div class="bg-white rounded-3xl">
                     <div class="flex flex-col lg:flex-row justify-between p-8">
                         <div class="lg:w-[63%]">
                             <h3 class="text-2xl font-semibold text-[#030712] text-center md:text-left">Select Your Seat
@@ -372,6 +372,59 @@
                             <h3 class="text-2xl font-semibold text-[#030712] text-center md:text-left">Select Your Seat
                             </h3>
                             <div class="divider-style my-2 lg:my-5"></div>
+                            <div>
+                                <div class="bg-[#F7F8F8] h-[335px] rounded-2xl p-8 font-inter">
+                                    <div class="flex justify-between">
+                                        <p class="font-medium text-[#030712]">Seat <span class="bg-[#1DD100] px-2 text-white rounded-2xl">0</span></p>
+                                        <p class="font-medium text-[#030712]">class</p>
+                                        <p class="font-medium text-[#030712]">Price</p>
+                                    </div>
+                                    <div class="divider-style my-2 lg:my-5"></div>
+                                </div>
+                                <div class="mt-6 font-inter">
+                                    <form action="">
+                                        <div>
+                                            <label for="name" class="font-semibold">Passenger Name*</label>
+                                            <input type="text" placeholder="Enter your name"
+                                                class="input input-bordered w-full mt-4 mb-6" />
+                                        </div>
+                                        <div>
+                                            <label for="phone" class="font-semibold">Phone Number*</label>
+                                            <input title="only phone number" type="tel"
+                                                placeholder="Enter your phone number"
+                                                class="input input-bordered w-full mt-4 mb-6" />
+                                        </div>
+                                        <div>
+                                            <label for="name" class="font-semibold">Email ID</label>
+                                            <input type="email" placeholder="Enter your email id"
+                                                class="input input-bordered w-full mt-4 mb-6" />
+                                        </div>
+                                        <!-- modal -->
+                                        <div>
+                                            <button class="btn text-xl font-extrabold w-full bg-[#1DD100] hover:text-black text-white" onclick="my_modal_4.showModal()">Next</button>
+                                            <dialog id="my_modal_4" class="modal">
+                                                <div class="modal-box w-11/12">
+                                                    <div class="flex flex-col items-center justify-center text-center space-y-4">
+                                                        <img src="./images/success.png" alt="">
+                                                        <h4 class="text-[#27AE60] text-2xl">SUCCESS</h4>
+                                                        <p class="text-[#4A4A4A] text-xl font-medium">Thank you for Booking Our Bus Seats. <br>We are working hard to find the best service and deals for you.</p>
+                                                        <p class="text-[#4A4A4A] text-xl font-light">Shortly you will find a confirmation in your email.</p>
+                                                    </div>
+                                                    <div class="text-center mt-5">
+                                                        <form method="dialog">
+                                                            <button class="btn w-3/5 bg-[#27AE60] text-xl font-semibold text-white hover:text-black">Continue</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </dialog>
+                                        </div>
+                                    </form>
+                                    <div class="flex justify-around mt-6">
+                                        <p class="border-b-2 text-[#03071299]"><a href="">Terms and Conditions</a></p>
+                                        <p class="border-b-2 text-[#03071299]"><a href="">Cancellation Policy</a></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
