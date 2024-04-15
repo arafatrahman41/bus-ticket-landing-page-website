@@ -22,3 +22,7 @@
 .divider-style{
   border-bottom: 2px dashed #03071233;
 }
+
+.divider-style-right{
+  border-right: 2px dashed #03071233; 
+}
