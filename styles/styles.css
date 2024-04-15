@@ -18,3 +18,7 @@
   border-radius: 88px 88px 0px 0px;
   border-top: 2px solid #1DD100;
 }
+
+.divider-style{
+  border-bottom: 2px dashed #03071233;
+}
