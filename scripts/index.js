@@ -1,14 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
   const applyBtn = document.getElementById('apply-btn');
   const couponInput = document.getElementById('coupon-input');
+  const phoneNumberInput = document.getElementById('phone-number');
+  const showModalBtn = document.getElementById('show-modal-btn');
 
   applyBtn.disabled = true;
+  showModalBtn.disabled = true;
 
   couponInput.addEventListener('input', function() {
     applyBtn.disabled = !isValidCoupon(this.value);
   });
 
+  phoneNumberInput.addEventListener('input', function() {
+    showModalBtn.disabled = !isValidPhoneNumber(this.value);
+  });
+
   applyBtn.addEventListener('click', applyCoupon);
+  showModalBtn.addEventListener('click', showModal);
 
   // Initialize the total price and grand total to 0
   const totalPriceElement = document.getElementById('total-price');
@@ -20,6 +28,11 @@ let couponApplied = false;
 
 function isValidCoupon(coupon) {
   return !couponApplied && (coupon === 'new15' || coupon === 'couple20');
+}
+
+function isValidPhoneNumber(phoneNumber) {
+  // Validate phone number format (you can use regex or other validation methods)
+  return phoneNumber.length === 10; // For example, require 10-digit phone number
 }
 
 function applyCoupon() {
@@ -41,6 +54,18 @@ function updateTotalPrice(price, totalPriceElement, grandTotalElement) {
   totalPriceElement.innerText = price.toFixed(2);
   grandTotalElement.innerText = price.toFixed(2);
 }
+
+function showModal() {
+  const modal = document.getElementById('my_modal_4');
+  if (modal) {
+    modal.classList.add('show');
+  } else {
+    console.error('Modal element not found');
+  }
+}
+
+
+//
 
 function buyTickets() {
   document.getElementById("select-your-seat").scrollIntoView({ behavior: "smooth" });
