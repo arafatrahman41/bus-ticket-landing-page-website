@@ -66,7 +66,8 @@
                     <p class="w-2/3 mx-auto mb-8 text-sm md:text-base">Welcome to TicketEase – your hassle-free solution
                         for bus ticket bookings. Enjoy seamless travel planning and secure your seats in just a few
                         clicks. Start your journey with ease today!</p>
-                    <button onclick="buyTickets()" class="btn border-none text-base md:text-xl bg-[#1DD100] md:px-7">Buy Tickets</button>
+                    <button onclick="buyTickets()" class="btn border-none text-base md:text-xl bg-[#1DD100] md:px-7">Buy
+                        Tickets</button>
                 </div>
             </div>
             <div
@@ -214,7 +215,7 @@
                             <div class="flex justify-center">
                                 <img src="./images/fare.png" alt="">
                             </div>
-                            <h4 class="text-2xl font-bold xl:text-4xl">550 Taka</h4>
+                            <h4 class="text-2xl font-bold xl:text-4xl"><span id="seat-price">550</span> Taka</h4>
                             <p class="text-lg xl:text-2xl font-semibold text-[#03071299]">Per Seat</p>
                         </div>
                     </div>
@@ -249,120 +250,160 @@
                                 <div class="flex justify-between items-center my-6">
                                     <p>A</p>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">A1</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">A2</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">A1</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">A2</button>
                                     </div>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">A3</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">A4</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">A3</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">A4</button>
                                     </div>
                                 </div>
                                 <!-- second row -->
                                 <div class="flex justify-between items-center my-6">
                                     <p>B</p>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">B1</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">B2</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">B1</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">B2</button>
                                     </div>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">B3</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">B4</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">B3</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">B4</button>
                                     </div>
                                 </div>
                                 <!-- third row -->
                                 <div class="flex justify-between items-center my-6">
                                     <p>C</p>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">C1</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">C2</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">C1</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">C2</button>
                                     </div>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">C3</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">C4</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">C3</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">C4</button>
                                     </div>
                                 </div>
                                 <!-- forth row -->
                                 <div class="flex justify-between items-center my-6">
                                     <p>D</p>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">D1</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">D2</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">D1</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">D2</button>
                                     </div>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">D3</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">D4</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">D3</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">D4</button>
                                     </div>
                                 </div>
                                 <!-- fifth row -->
                                 <div class="flex justify-between items-center my-6">
                                     <p>E</p>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">E1</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">E2</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">E1</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">E2</button>
                                     </div>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">E3</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">E4</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">E3</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">E4</button>
                                     </div>
                                 </div>
                                 <!-- sixth row -->
                                 <div class="flex justify-between items-center my-6">
                                     <p>F</p>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">F1</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">F2</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">F1</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">F2</button>
                                     </div>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">F3</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">F4</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">F3</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">F4</button>
                                     </div>
                                 </div>
                                 <!-- seventh row -->
                                 <div class="flex justify-between items-center my-6">
                                     <p>G</p>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">G1</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">G2</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">G1</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">G2</button>
                                     </div>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">G3</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">G4</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">G3</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">G4</button>
                                     </div>
                                 </div>
                                 <!-- eighth row -->
                                 <div class="flex justify-between items-center my-6">
                                     <p>H</p>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">H1</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">H2</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">H1</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">H2</button>
                                     </div>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">H3</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">H4</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">H3</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">H4</button>
                                     </div>
                                 </div>
                                 <!-- ninth row -->
                                 <div class="flex justify-between items-center my-6">
                                     <p>I</p>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">I1</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">I2</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">I1</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">I2</button>
                                     </div>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">I3</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">I4</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">I3</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">I4</button>
                                     </div>
                                 </div>
                                 <!-- last row -->
                                 <div class="flex justify-between items-center my-6">
                                     <p>J</p>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">J1</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">J2</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">J1</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">J2</button>
                                     </div>
                                     <div class="space-x-1 md:space-x-5">
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">J3</button>
-                                        <button class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">J4</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">J3</button>
+                                        <button
+                                            class="seat-btn btn px-5 md:px-10 w-14 md:w-28 lg:w-20 xl:w-28">J4</button>
                                     </div>
                                 </div>
                             </div>
@@ -375,19 +416,28 @@
                             <div>
                                 <div class="bg-[#F7F8F8] h-[335px] rounded-2xl p-8 font-inter">
                                     <div class="flex justify-between">
-                                        <p class="font-medium text-[#030712]">Seat <span id="seat-count" class="bg-[#1DD100] px-2 text-white rounded-2xl">0</span></p>
+                                        <p class="font-medium text-[#030712]">Seat <span id="seat-count"
+                                                class="bg-[#1DD100] px-2 text-white rounded-2xl">0</span></p>
                                         <p class="font-medium text-[#030712]">class</p>
                                         <p class="font-medium text-[#030712]">Price</p>
                                     </div>
                                     <div class="divider-style my-2 lg:my-5"></div>
                                     <div id="seat-input">
-                                        <div class="flex justify-between items-center">
-                                            <h4 class="text-base font-medium">Total Price:</h4>
-                                            <p class="font-medium">BDT <span>0</span></p>
+                                        <div id="sum-container">
+                                            <div id="appending-items">
+
+                                            </div>
+                                            <hr>
+                                            <div class="flex justify-between w-full">
+                                                <h4 class="text-base font-medium">Total Price:</h4>
+                                                <p class="font-medium">BDT <span id="total-price">0</span></p>
+                                            </div>
                                         </div>
                                         <div class="flex relative my-5">
-                                            <input type="text" placeholder="Have any coupon?" class="input input-bordered w-full" />
-                                            <button class="btn absolute left-[272px] bg-[#1DD100] text-white font-semibold text-base px-5">Apply</button>
+                                            <input type="text" placeholder="Have any coupon?"
+                                                class="input input-bordered w-full" />
+                                            <button
+                                                class="btn absolute left-[272px] bg-[#1DD100] text-white font-semibold text-base px-5">Apply</button>
                                         </div>
                                         <div class="flex justify-between items-center">
                                             <h4 class="font-medium">Grand Total</h4>
@@ -415,18 +465,25 @@
                                         </div>
                                         <!-- modal -->
                                         <div>
-                                            <button class="btn text-xl font-extrabold w-full bg-[#1DD100] hover:text-black text-white" onclick="my_modal_4.showModal()">Next</button>
+                                            <button
+                                                class="btn text-xl font-extrabold w-full bg-[#1DD100] hover:text-black text-white"
+                                                onclick="my_modal_4.showModal()">Next</button>
                                             <dialog id="my_modal_4" class="modal">
                                                 <div class="modal-box w-11/12">
-                                                    <div class="flex flex-col items-center justify-center text-center space-y-4">
+                                                    <div
+                                                        class="flex flex-col items-center justify-center text-center space-y-4">
                                                         <img src="./images/success.png" alt="">
                                                         <h4 class="text-[#27AE60] text-2xl">SUCCESS</h4>
-                                                        <p class="text-[#4A4A4A] text-xl font-medium">Thank you for Booking Our Bus Seats. <br>We are working hard to find the best service and deals for you.</p>
-                                                        <p class="text-[#4A4A4A] text-xl font-light">Shortly you will find a confirmation in your email.</p>
+                                                        <p class="text-[#4A4A4A] text-xl font-medium">Thank you for
+                                                            Booking Our Bus Seats. <br>We are working hard to find the
+                                                            best service and deals for you.</p>
+                                                        <p class="text-[#4A4A4A] text-xl font-light">Shortly you will
+                                                            find a confirmation in your email.</p>
                                                     </div>
                                                     <div class="text-center mt-5">
                                                         <form method="dialog">
-                                                            <button class="btn w-3/5 bg-[#27AE60] text-xl font-semibold text-white hover:text-black">Continue</button>
+                                                            <button
+                                                                class="btn w-3/5 bg-[#27AE60] text-xl font-semibold text-white hover:text-black">Continue</button>
                                                         </form>
                                                     </div>
                                                 </div>
