@@ -1,11 +1,55 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const applyBtn = document.getElementById('apply-btn');
+  const couponInput = document.getElementById('coupon-input');
+
+  applyBtn.disabled = true;
+
+  couponInput.addEventListener('input', function() {
+    applyBtn.disabled = !isValidCoupon(this.value);
+  });
+
+  applyBtn.addEventListener('click', applyCoupon);
+
+  // Initialize the total price and grand total to 0
+  const totalPriceElement = document.getElementById('total-price');
+  const grandTotalElement = document.getElementById('grand-total');
+  updateTotalPrice(0, totalPriceElement, grandTotalElement);
+});
+
+let couponApplied = false;
+
+function isValidCoupon(coupon) {
+  return !couponApplied && (coupon === 'new15' || coupon === 'couple20');
+}
+
+function applyCoupon() {
+  const couponCode = document.getElementById('coupon-input').value.toLowerCase();
+  if (isValidCoupon(couponCode)) {
+    const totalPriceElement = document.getElementById('total-price');
+    const grandTotalElement = document.getElementById('grand-total');
+    const totalPrice = parseFloat(totalPriceElement.innerText);
+    const discountedPrice = totalPrice - (totalPrice * (couponCode === 'new15' ? 0.15 : 0.20));
+    updateTotalPrice(discountedPrice, totalPriceElement, grandTotalElement);
+    couponApplied = true;
+    this.disabled = true;
+  } else {
+    alert('Invalid coupon code or coupon already applied');
+  }
+}
+
+function updateTotalPrice(price, totalPriceElement, grandTotalElement) {
+  totalPriceElement.innerText = price.toFixed(2);
+  grandTotalElement.innerText = price.toFixed(2);
+}
+
 function buyTickets() {
-  const selectYourSeat = document.getElementById("select-your-seat");
-  selectYourSeat.scrollIntoView({ behavior: "smooth" });
+  document.getElementById("select-your-seat").scrollIntoView({ behavior: "smooth" });
 }
 
 const allBtn = document.getElementsByClassName("seat-btn");
 let count = 1;
 let backCount = 39;
+let totalPrice = 0;
 
 for (const btn of allBtn) {
   btn.addEventListener("click", function (e) {
@@ -13,7 +57,7 @@ for (const btn of allBtn) {
     const selectedSeat = seatCount.innerText;
 
     const seatPrice = document.getElementById("seat-price");
-    const selectSeatPrice = seatPrice.innerText;
+    const selectSeatPrice = parseFloat(seatPrice.innerText);
 
     seatCount.innerText = count++;
     const seatLeftCount = document.getElementById("seat-left-count");
@@ -28,7 +72,7 @@ for (const btn of allBtn) {
     const p2 = document.createElement("p");
     p2.innerText = "Economy";
     const p3 = document.createElement("p");
-    p3.innerText = selectSeatPrice;
+    p3.innerText = `$${selectSeatPrice.toFixed(2)}`;
 
     div.appendChild(p1);
     div.appendChild(p2);
@@ -40,24 +84,15 @@ for (const btn of allBtn) {
     }
 
     if (count > 4) {
-      alert("You can only up to select 4 seats");
+      alert("You can only select up to 4 seats");
     }
 
     e.target.style.backgroundColor = "#1DD100";
     e.target.style.color = "#ffffff";
     e.target.disabled = true;
-   
-    const totalPrice = document.getElementById('total-price');
-    const currentTotalPrice = parseInt(totalPrice.innerText);
-    if (!isNaN(currentTotalPrice)) {
-        const newTotalPrice = currentTotalPrice + parseInt(selectSeatPrice);
-        totalPrice.innerText = newTotalPrice;
-    } else {
-        console.error('Total price element does not contain a valid numeric value');
-    }
 
-    document.getElementById('apply-btn').addEventListener('click', function(){
-        const couponInput = document.getElementById('coupon-input').value.toLowerCase();
-    })
+    totalPrice += selectSeatPrice;
+    document.getElementById('total-price').innerText = totalPrice.toFixed(2);
+    document.getElementById('grand-total').innerText = totalPrice.toFixed(2);
   });
 }

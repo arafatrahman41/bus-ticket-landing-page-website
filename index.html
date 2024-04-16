@@ -414,7 +414,7 @@
                             </h3>
                             <div class="divider-style my-2 lg:my-5"></div>
                             <div>
-                                <div class="bg-[#F7F8F8] h-[335px] rounded-2xl p-8 font-inter">
+                                <div class="bg-[#F7F8F8] rounded-2xl p-8 font-inter">
                                     <div class="flex justify-between">
                                         <p class="font-medium text-[#030712]">Seat <span id="seat-count"
                                                 class="bg-[#1DD100] px-2 text-white rounded-2xl">0</span></p>
@@ -428,16 +428,16 @@
 
                                             </div>
                                             <hr>
-                                            <div class="flex justify-between w-full">
+                                            <div id="total-price-container" class="flex justify-between w-full">
                                                 <h4 class="text-base font-medium">Total Price:</h4>
                                                 <p class="font-medium">BDT <span id="total-price">0</span></p>
                                             </div>
                                         </div>
-                                        <div class="flex relative my-5">
+                                        <div class="xl:flex relative my-5">
                                             <input id="coupon-input" type="text" placeholder="Have any coupon?"
-                                                class="input input-bordered w-full" />
+                                                class="input input-bordered w-full mb-3 xl:mb-0" />
                                             <button id="apply-btn"
-                                                class="btn absolute left-[272px] bg-[#1DD100] text-white font-semibold text-base px-5">Apply</button>
+                                                class="btn xl:absolute xl:left-[188px] 2xl:left-[272px] bg-[#1DD100] text-white font-semibold text-base px-5">Apply</button>
                                         </div>
                                         <div class="flex justify-between items-center">
                                             <h4 class="font-medium">Grand Total</h4>
@@ -454,7 +454,7 @@
                                         </div>
                                         <div>
                                             <label for="phone" class="font-semibold">Phone Number*</label>
-                                            <input title="only phone number" type="tel"
+                                            <input id="phone-number" title="only phone number" type="tel"
                                                 placeholder="Enter your phone number"
                                                 class="input input-bordered w-full mt-4 mb-6" />
                                         </div>
@@ -465,7 +465,7 @@
                                         </div>
                                         <!-- modal -->
                                         <div>
-                                            <button
+                                            <button id="show-modal-btn"
                                                 class="btn text-xl font-extrabold w-full bg-[#1DD100] hover:text-black text-white"
                                                 onclick="my_modal_4.showModal()">Next</button>
                                             <dialog id="my_modal_4" class="modal">
@@ -503,7 +503,6 @@
             <!-- select your seat section end -->
         </div>
         <!-- London Express seats count end -->
-
     </main>
     <!-- main section end -->
     <!-- footer section start -->
