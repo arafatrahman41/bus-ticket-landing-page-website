@@ -56,5 +56,8 @@ for (const btn of allBtn) {
         console.error('Total price element does not contain a valid numeric value');
     }
 
+    document.getElementById('apply-btn').addEventListener('click', function(){
+        const couponInput = document.getElementById('coupon-input').value.toLowerCase();
+    })
   });
 }
